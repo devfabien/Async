@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>timeout promises</h1>
+    <div class="completion">not yet</div>
+    <script>
+        function wait(ms){
+           return new Promise(function(resolve){
+            console.log(this)
+            setTimeout(function(){
+                resolve();
+            },ms);
+           });
+        }
+        var milliseconds=3000;
+        wait(milliseconds).then(finish);
+        function finish(){
+            var completion=document.querySelector('.completion');
+            completion.innerHTML='complete after ' + milliseconds + 'ms.'; 
+        }
+    </script>
+</body>
+</html>
