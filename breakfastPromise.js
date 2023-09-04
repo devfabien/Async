@@ -5,4 +5,4 @@ const breakFast= new Promise(function(resolve,reject){
 });
 breakFast.then((message)=>
     console.log(`Resolved: ${message}`)
-).catch((message)=>console.log(`Rejected: ${message}`))
+).then(undefined,(message)=>console.log(`Rejected: ${message}`))
