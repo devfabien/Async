@@ -11,14 +11,14 @@
 <button type="button" onclick="generate()">generate</button>
 </code>
 <script>
-    function generate(){
+    // function generate(){
         const request=new XMLHttpRequest();
         request.onload= function(){
             document.getElementById("datas").innerHTML=this.responseText;
         }
         request.open("GET","structure.txt")
         request.send();
-    }
+    // }
 </script>
 </body>
 </html>
