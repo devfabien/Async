@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AJAX Exercises</h1>
+  <code style="background-color: rgb(224, 236, 248); padding-left:28px ; padding-right: 28px;" id="datas">
+<button type="button" onclick="generate()">generate</button>
+</code>
+<script>
+    function generate(){
+        const request=new XMLHttpRequest();
+        request.onload= function(){
+            document.getElementById("datas").innerHTML=this.responseText;
+        }
+        request.open("GET","structure.txt")
+        request.send();
+    }
+</script>
+</body>
+</html>
