@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Universities</h1>
+    <button type="button" onclick="load()">Rwanda</button>
+    <div style="padding: 10px; display: grid; grid-template-columns: 4;" id="datas"></div>
+    <script>
+        const link="http://universities.hipolabs.com/search?country=rwanda";
+function load(){
+        fetch(link).then(function(res){
+            return res.json();
+        }).then(function(myData){
+        document.getElementById('datas').innerHTML=myData.filter((item,i)=>i<11).map(({name,web_pages})=> `<div style="padding:7px; background-color:rgb(224, 236, 248);"><h2>${name}</h2><h3>${web_pages}</h3></div>` );
+        
+        })
+    }
+    </script>
+</body>
+</html>
