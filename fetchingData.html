@@ -14,7 +14,7 @@
 function load(){
         fetch(link).then(function(res){
             return res.json();
-        }).then(function(myData){
+        }).catch(()=>consloe.log("there is an error in fetching")).then(function(myData){
         document.getElementById('datas').innerHTML=myData.filter((item,i)=>i<11).map(({name,web_pages})=> `<div style="padding:7px; background-color:rgb(224, 236, 248);"><h2>${name}</h2><h3>${web_pages}</h3></div>` );
         
         })
