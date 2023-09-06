@@ -48,3 +48,7 @@ promise.then(function(data) {
     console.log(data + ' 1');
 });
 
+promise.then(function(data) {
+    console.log(data + ' 2');
+});
+
