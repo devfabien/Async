@@ -71,3 +71,12 @@ promise.then(function success(data) {
 },function error(data){
     console.error(data)
 })
+
+
+//You can still bind multiple then methods:
+
+var promise = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        reject('We are all going to die');
+    }, 2000);
+});
