@@ -44,3 +44,7 @@ var promise = new Promise(function(resolve, reject) {
     }, 2000);
 });
 
+promise.then(function(data) {
+    console.log(data + ' 1');
+});
+
