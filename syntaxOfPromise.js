@@ -14,5 +14,7 @@ let promise = $q(function(resolve, reject){
 })
 
 //Ajax request in jquery
-
 let promise= $.get('/foo/bar/common')
+
+//Ajax request in Angular
+let promise = $http.get('/foo/bar/common')
