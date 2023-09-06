@@ -1,5 +1,23 @@
+// setTimeout(function() {
+//     console.log('I am an asynchronous message');
+// }, 0);
+
+// console.log('I am a synchronous message');
+
 setTimeout(function() {
     console.log('I am an asynchronous message');
-}, 0);
+}); // You can omit the 0
 
-console.log('I am a synchronous message');
+console.log('Test 1');
+
+for (let i = 0; i < 10000; ++i) {
+    doSomeStuff();
+}
+
+console.log('Test 2');
+
+// The 'I am an asynchronous message' will be displayed when the main thread reach here
+
+function doSomeStuff() {
+    return 1 + 1;
+}
