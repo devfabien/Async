@@ -52,3 +52,6 @@ promise.then(function(data) {
     console.log(data + ' 2');
 });
 
+promise.then(function(data) {
+    console.log(data + ' 3');
+});
