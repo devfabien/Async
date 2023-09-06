@@ -112,3 +112,20 @@ var promise = new Promise(function(resolve, reject) {
 promise.then(function success(data) {
     console.log(data);
 });
+
+
+
+// promise written in another way
+
+function job() {
+    return new Promise(function(resolve, reject){
+        setTimeout(()=>{
+            resolve("hello world")
+        },2000)
+    })
+}
+job().then((data)=>{
+console.log(data)
+})
+
+module.exports = job;
