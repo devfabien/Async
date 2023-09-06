@@ -91,3 +91,8 @@ promise.then(function success(data) {
 }, function error(data) {
     console.error(data + ' 2');
 });
+promise.then(function success(data) {
+    console.log(data + ' 3');
+}, function error(data) {
+    console.error(data + ' 3');
+});
