@@ -66,6 +66,6 @@ var promise = new Promise(function(resolve, reject) {
     }, 2000);
 });
 
-promise.then(function success(data) {
+promise.then(function success(data) { 
     console.log("resolved",data);
 })
