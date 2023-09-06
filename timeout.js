@@ -68,4 +68,6 @@ var promise = new Promise(function(resolve, reject) {
 
 promise.then(function success(data) { 
     console.log("resolved",data);
+},function error(data){
+    console.error(data)
 })
