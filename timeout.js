@@ -148,7 +148,9 @@ function job(data) {
             }
     },2000) 
 
-  
+    setTimeout(() => {
+        if(data%2 !== 0) resolve("odd")
+    },1000)
 
         
         
