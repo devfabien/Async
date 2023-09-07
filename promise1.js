@@ -29,7 +29,7 @@ promise
 
 .then(function(data) {
     if (data !== 'victory') {
-        return 'Defeat';
+        throw 'Defeat';
     }
 
     return job(true);
