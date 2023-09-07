@@ -142,7 +142,14 @@ function job(data) {
         if(isNaN(data)){
         reject("error")
         }
-        
+        setTimeout(()=> {
+            if(data%2==0){
+                reject("even")
+            }
+    },2000) 
+
+  
+
         
         
     });
