@@ -8,14 +8,20 @@
 <body>
     <h1>Universities</h1>
     <button type="button" onclick="load()">Rwanda</button>
-    <div style="padding: 10px; display: grid; grid-template-columns: 4;" id="datas"></div>
+    <div style="padding: 10px; display: grid; grid-template-columns:50% 50%; width: 100%; gap:5px" id="datas">
+ 
+    </div>
     <script>
         const link="http://universities.hipolabs.com/search?country=rwanda";
 function load(){
         fetch(link).then(function(res){
             return res.json();
-        }).catch(()=>consloe.log("there is an error in fetching")).then(function(myData){
-        document.getElementById('datas').innerHTML=myData.filter((item,i)=>i<11).map(({name,web_pages})=> `<div style="padding:7px; background-color:rgb(224, 236, 248);"><h2>${name}</h2><h3>${web_pages}</h3></div>` );
+        }).catch(()=>console.log("there is an error in fetching")).then(function(myData){
+            let pr=document.getElementById('datas');
+            console.log(myData)
+            myData.map(({name,web_pages})=>{
+            let div=document.createElement("div");
+        div.innerHTML=`<div style="padding:7px; background-color:rgb(224, 236, 248);"><h2>${name}</h2><h3>${web_pages}</h3></div>`; pr.appendChild(div)} );
         
         })
     }
