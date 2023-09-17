@@ -8,4 +8,8 @@ async function getJSON(url){
     })
 }
 
-
+getJSON('https://jsonplaceholder.typicode.com/users').then(function(response){
+    console.log(response)
+}).catch(function(error){
+    console.log('unknown')
+})
